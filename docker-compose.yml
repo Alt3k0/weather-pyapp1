@@ -5,7 +5,7 @@ services:
     restart: always
 
   pyapp:
-    image: pyapp:latest
+    image: weather:latest
     depends_on:
       - redis
     restart: always

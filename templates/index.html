@@ -1,29 +1,72 @@
- <!doctype html>
-<html lang="en">
-  <head>
-      <title>PyApp</title>
+k<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo à Nouméa</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-      <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
+    .card {
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
 
+    h1 {
+      font-size: 1.8rem;
+      color: #0077b6;
+      margin-bottom: 1.5rem;
+    }
 
-  <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="https://www.dictionary.com/e/wp-content/uploads/2018/03/Chuck-Norris-facts-300x300.jpg" alt="" >
-    <h1 class="display-5 fw-bold">Hello Chuck !</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Ce site à était chuckifié {{ visits }} fois.</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Contact</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Feedback</button>
-      </div>
-    </div>
+    .value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.2rem;
+    }
+
+    .label {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .emoji {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Météo à Nouméa </h1>
+
+    <div class="value">{{ temperature }}°C</div>
+    <div class="label"><span class="emoji"></span>Ce site à était visité  : {{ visits }} fois.</div>
+
+    <footer>via <a href=https://open-meteo.com/>Open-Meteo</a></footer>
   </div>
 
-
-    <!-- Bootstrap Javascripts -->  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  </body>    
-</html> 
+</body>
+</html>

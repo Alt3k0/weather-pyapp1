@@ -1,6 +1,6 @@
 FROM python:alpine
 
-RUN pip3 install flask redis
+RUN pip3 install flask redis requests
 
 WORKDIR /app
 
