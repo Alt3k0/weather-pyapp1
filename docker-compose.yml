@@ -1,0 +1,14 @@
+
+services:
+  redis:
+    image: redis:alpine
+    restart: always
+
+  pyapp:
+    image: weather:latest
+    build: .
+    depends_on:
+      - redis
+    restart: always
+    ports:
+      - "80:80"
