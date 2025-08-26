@@ -63,7 +63,9 @@ k<!doctype html>
     <h1>Météo à Nouméa </h1>
 
     <div class="value">{{ temperature }}°C</div>
-    <div class="label"><span class="emoji"></span>Ce site à était visité  : {{ visits }} fois.</div>
+    <div class="label">Ce site a été visité : {{ visits }} fois</div>
+    <div class="label">💨 Vent : {{ wind_speed }} km/h, direction {{ wind_direction }}°</div>
+    <div class="label">🌧️ Pluie : {{ rain }} mm</div>
 
     <footer>via <a href=https://open-meteo.com/>Open-Meteo</a></footer>
   </div>
